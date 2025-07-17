@@ -34,10 +34,11 @@ graph TD
     end
 
     subgraph "Academic Coordinator"
-        A[1. Greet and Request PDF] --> B[2. Analyze Seminal Paper]
-        B --> C[3. Invoke Web Search Agent]
-        C --> D[4. Invoke New Research Agent]
-        D --> E[5. Present Results]
+        A["1: Greet and Request PDF"]
+        B["2: Analyze Seminal Paper"]
+        C["3: Invoke Web Search Agent"]
+        D["4: Invoke New Research Agent"]
+        E["5: Present Results"]
     end
 
     subgraph "Sub-Agents / Tools"
@@ -46,8 +47,12 @@ graph TD
     end
 
     User --> A
+    A --> B
+    B --> C
     C --> F
+    C --> D
     D --> G
+    D --> E
     E --> User
 ```
 
